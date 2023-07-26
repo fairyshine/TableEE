@@ -13,7 +13,7 @@ output_dir: './output/'
 # model settings
 ## * core
 model_name: BERT-globalpointer #model name
-checkpoint : '/data6/mswu/PTM/bert-base-chinese'     #'/data6/mswu/PTM/bert-base-chinese'  #'/data6/mswu/PTM/chinese-roberta-wwm-ext'
+checkpoint : ''     #'/PTM/bert-base-chinese' 'chinese-roberta-wwm-ext'
 device_wanted: cuda #cpu、mps、cuda
 device_id: -1 #id of device, if -1, no-select
 batch_size : 6
