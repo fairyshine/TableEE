@@ -1,0 +1,40 @@
+# several key selective parameters
+## * dir to load data
+data_dir: './data/' 
+train_data : 'TRAIN.json' #'TRAIN_debug.json'
+dev_data : 'DEV.json'
+test_data : 'TEST.json'
+pickle_path: 'pickle_data/'
+process_dataset : False
+
+## * dir to save output
+output_dir: './output/' 
+
+# model settings
+## * core
+model_name: BERT-globalpointer #model name
+checkpoint : '/data6/mswu/PTM/bert-base-chinese'     #'/data6/mswu/PTM/bert-base-chinese'  #'/data6/mswu/PTM/chinese-roberta-wwm-ext'
+device_wanted: cuda #cpu、mps、cuda
+device_id: -1 #id of device, if -1, no-select
+batch_size : 6
+gradient_accumulation_steps : 4
+seed: 42 #random seed
+lr: 5e-5  #0.0001
+lr_scheduler: 0.05
+train_epoch: 20 #max epoches during training
+dropout: 0.1
+max_grad_norm: 1.0
+
+# * model
+table_pos_type: 'default'
+
+table_self_att: False
+
+inner_dim: 192
+custom_RoPE_pos: True
+
+# * mode
+TRAIN_MODE : False
+TEST_MODE : True
+model_for_test: 'BEST_devF1_.pt'
+output_model_dir: 'output/BERT-globalpointer | 2023-05-21 09:37:04/'
