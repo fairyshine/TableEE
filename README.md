@@ -38,4 +38,4 @@
 
 ![主要结果](./doc/主要结果.png)
 
-(ChatGLM2、InternLM、ChatGPT采用ICL)
+(ChatGLM2、InternLM、ChatGPT采用ICL，prompt可见doc/LLM_prompt.md)
